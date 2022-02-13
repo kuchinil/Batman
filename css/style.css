@@ -1,23 +1,55 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 700';
+  src: url('../fonts/MuseoSans/MuseoSansCyrl-700.eot');
+  src: local('MuseoSansCyrl-700'),
+    url('../fonts/MuseoSans/MuseoSansCyrl-700.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/MuseoSans/MuseoSansCyrl-700.woff') format('woff'),
+    url('../fonts/MuseoSans/MuseoSansCyrl-700.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: url('../img/background.jpg') no-repeat;
   color: #fff;
 }
 
 .container {
+  position: relative;
   max-width: 1135px;
   margin: 0 auto;
 }
 
 header {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 29px;
 }
 
 .logo {
@@ -53,7 +85,19 @@ header {
 }
 
 .main {
-  padding-top: 127px;
+  background: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+  padding-top: 187px;
+  padding-bottom: 104px;
+}
+
+.main .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .genre {
@@ -64,19 +108,32 @@ header {
 }
 
 .rating {
+  margin-top: 20px;
   display: flex;
   align-items: center;
+}
+
+.rating img {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
 }
 .rating img:not(:last-child) {
   margin-right: 4px;
 }
 
-.points {
+.rating-points {
   margin-left: 9px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  flex-shrink: 0;
 }
 
 .main-title {
-  font-weight: 600;
+  font-family: 'Museo Sans Cyrl 700';
   font-size: 76px;
   line-height: 91px;
   margin-top: 10px;
@@ -92,7 +149,8 @@ header {
 
 .buy-button {
   display: inline-block;
-  margin-top: 41px;
+  margin-top: 21px;
+  margin-bottom: 88px;
   color: #fff;
   text-decoration: none;
   padding: 22px 72px;
@@ -105,4 +163,77 @@ header {
   background: #fff;
   color: #000;
   transition: 0.5s;
+}
+
+.footer {
+  background: #030102;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-copyright p {
+  color: #fff;
+  opacity: 0.4;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.footer-menu li:not(:last-child) {
+  margin-right: 25px;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.4;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.main-slider-wrap {
+  max-width: 356px;
+}
+
+.main-slider-slide {
+  position: relative;
+  width: 164px;
+  height: 105px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.main-slider-slide span {
+  position: absolute;
+  left: 12px;
+  bottom: 6px;
+  transform: translate(0, 0%);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.main-slider-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

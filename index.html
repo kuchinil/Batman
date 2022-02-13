@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Batman</title>
   </head>
   <body>
-    <div class="container">
-      <header class="header">
+    <header class="header">
+      <div class="container">
         <nav class="nav">
           <a href="/" class="logo">
             <img src="./img/logo.svg" alt="site-logo" />
@@ -34,23 +38,29 @@
           <a href="#"><img src="./img/facebook.svg" alt="facebook" /></a>
         </div>
         <!-- /.social-icons -->
-      </header>
+      </div>
+    </header>
 
-      <main class="main">
+    <main class="main">
+      <div class="container">
         <div class="content">
           <p class="genre">2022, боевик, триллер</p>
           <div class="rating">
-            <img src="./img/star.svg" alt="star" />
-            <img src="./img/star.svg" alt="star" />
-            <img src="./img/star.svg" alt="star" />
-            <img src="./img/star.svg" alt="star" />
-            <img src="./img/star.svg" alt="star" />
-            <img src="./img/star.svg" alt="star" />
-            <img src="./img/star.svg" alt="star" />
-            <img src="./img/star-0.svg" alt="star-0" />
-            <img src="./img/star-0.svg" alt="star-0" />
-            <img src="./img/star-0.svg" alt="star-0" />
-            <p class="points">7/10</p>
+            <div class="rating-stars">
+              <img src="./img/star-active.svg" alt="star" />
+              <img src="./img/star-active.svg" alt="star" />
+              <img src="./img/star-active.svg" alt="star" />
+              <img src="./img/star-active.svg" alt="star" />
+              <img src="./img/star-active.svg" alt="star" />
+              <img src="./img/star-active.svg" alt="star" />
+              <img src="./img/star-active.svg" alt="star" />
+              <img src="./img/star-no-active.svg" alt="star-0" />
+              <img src="./img/star-no-active.svg" alt="star-0" />
+              <img src="./img/star-no-active.svg" alt="star-0" />
+            </div>
+            <!-- /.rating-stars -->
+            <div class="rating-points">7/10</div>
+            <!-- /.rating-points -->
           </div>
           <h1 class="main-title">Бэтмен</h1>
           <p class="main-description">
@@ -61,13 +71,48 @@
             преступного мира. Теперь под прицелом оказывается сам Бэтмен.
           </p>
           <a href="#" class="buy-button">Купить билеты</a>
+          <div class="main-slider-wrap">
+            <div class="main-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="main-slider-slide swiper-slide">
+                  <img src="./img/slide-1.jpg" alt="slide-image" />
+                  <span>Трейлер #1</span>
+                </div>
+                <div class="main-slider-slide swiper-slide">
+                  <img src="./img/slide-2.jpg" alt="slide-image" />
+                  <span>Трейлер #2</span>
+                </div>
+                <div class="main-slider-slide swiper-slide">
+                  <img src="./img/slide-1.jpg" alt="slide-image" />
+                  <span>Трейлер #3</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- /.content -->
-        <div class="play"></div>
+        <div class="play">здесь будет кнопка</div>
         <!-- /.play -->
-      </main>
-      <!-- /.main -->
-    </div>
-    <!-- /.container -->
+      </div>
+    </main>
+    <!-- /.main -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-copyright">
+          <p>© 2022 The Batman. All right reserved.</p>
+        </div>
+        <!-- /.footer-copyright -->
+        <ul class="footer-menu">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Legal</a></li>
+        </ul>
+        <!-- /.footer-menu -->
+      </div>
+      <!-- /.container -->
+    </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
