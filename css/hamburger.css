@@ -1,7 +1,5 @@
 .btn-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -56,5 +54,11 @@
     .menu-open .btn-menu .btn-menu__bars:after {
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
+
+@media (max-width: 799px) {
+  .btn-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
 
 /*# sourceMappingURL=hamburger.css.map */

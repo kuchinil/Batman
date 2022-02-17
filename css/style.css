@@ -357,6 +357,9 @@ header {
 }
 
 @media (max-width: 799px) {
+  .btn-menu {
+    display: flex;
+  }
   .main .container {
     display: block;
     max-width: ;
@@ -384,5 +387,20 @@ header {
   }
   .btn-menu {
     display: block;
+  }
+}
+
+@media (max-width: 530px) {
+  .container {
+    max-width: 420px;
+  }
+  .footer .container {
+    display: block;
+    text-align: center;
+  }
+  .footer-menu {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
   }
 }
