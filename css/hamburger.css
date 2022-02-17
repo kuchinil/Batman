@@ -1,0 +1,60 @@
+.btn-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 33px;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease; }
+  .btn-menu:focus {
+    outline: none; }
+  .btn-menu__text {
+    margin-left: 14px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1; }
+  .btn-menu__bars {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .btn-menu__bars:before, .btn-menu__bars:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+    .btn-menu__bars:before {
+      -webkit-transform: translate(0, -14px);
+              transform: translate(0, -14px); }
+    .btn-menu__bars:after {
+      -webkit-transform: translate(0, 14px);
+              transform: translate(0, 14px); }
+  .menu-open .btn-menu .btn-menu__bars {
+    background-color: transparent; }
+    .menu-open .btn-menu .btn-menu__bars:before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .menu-open .btn-menu .btn-menu__bars:after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+
+/*# sourceMappingURL=hamburger.css.map */

@@ -40,7 +40,7 @@ body {
 
 header {
   position: absolute;
-  top: 0px;
+  top: 64px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -104,11 +104,15 @@ header {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  margin-bottom: 0px;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
 .rating {
   margin-top: 20px;
+}
+
+.rating-inner-wrap {
   display: flex;
   align-items: center;
 }
@@ -209,7 +213,9 @@ header {
 }
 
 .main-slider-wrap {
-  max-width: 356px;
+  max-width: 415px;
+  display: flex;
+  align-items: center;
 }
 
 .main-slider-slide {
@@ -236,4 +242,147 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.main-slider-arrow {
+  width: 32px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-left: 28px;
+  cursor: pointer;
+}
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-100%, -50%);
+
+  cursor: pointer;
+}
+
+.button-gray {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #301817;
+  border-radius: 50%;
+  width: 132px;
+  height: 132px;
+}
+
+.button-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.play img {
+  width: 35px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-opened {
+  display: none;
+  background-color: #151515;
+  text-align: center;
+  padding: 39px 39px;
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+
+.open-menu {
+  display: block;
+}
+
+.menu-opened-logo {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.menu-opened-logo img {
+  width: 79px;
+  height: 29px;
+  margin-bottom: 30px;
+}
+
+.menu-opened-social-icons {
+  margin-bottom: 20px;
+}
+.menu-opened-social-icons a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.menu-opened-list {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-opened-list li {
+  list-style-type: none;
+}
+
+.menu-opened-list li:not(:last-child) {
+  margin-bottom: 17px;
+}
+
+.menu-opened-list a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-closed {
+  display: none;
+}
+
+@media (max-width: 1160px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 930px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 799px) {
+  .main .container {
+    display: block;
+    max-width: ;
+  }
+  .play {
+    display: none;
+  }
+  .container {
+    max-width: 500px;
+  }
+  .buy-button {
+    margin-bottom: 50px;
+  }
+  .main {
+    padding-bottom: 50px;
+  }
+  .footer-menu {
+    flex-wrap: wrap;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .social-icons {
+    display: none;
+  }
+  .btn-menu {
+    display: block;
+  }
 }
